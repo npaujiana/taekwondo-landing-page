@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Baekho Martial Arts Academy — Premier Martial Arts in Sydney for Ages 4+</title>
+  <meta name="description" content="Premier martial arts and Olympic Taekwondo classes in Sydney for ages 4 to adult. Small classes, Kukkiwon 5th Dan Master instruction, first class free. Book a free trial." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Baekho Martial Arts Academy — The #1 Premier Martial Arts Academy" />
+  <meta property="og:description" content="Sydney's premier martial arts academy for ages 4 to adult. Small classes, certified instructors, first class free." />
+  <meta property="og:image" content="assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+  <meta name="theme-color" content="#070a11" />
+
+  <!-- Fonts: Google Fonts Antonio (Cyber Hero Display) + Archivo (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700;800&family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS modular — tokens → base → layout → components → sections -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+
+  <!-- LocalBusiness schema for Sydney Australia location -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Baekho Martial Arts Academy",
+    "sport": "Taekwondo",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1420 Pacific Hwy",
+      "addressLocality": "Sydney",
+      "addressRegion": "NSW",
+      "postalCode": "2060",
+      "addressCountry": "AU"
+    },
+    "telephone": "+61-2-9555-0142",
+    "openingHours": ["Mo-Fr 15:00-21:00", "Sa 08:00-13:00"],
+    "priceRange": "$85-$115 AUD/mo"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= 1. HEADER / NAV ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Baekho Martial Arts Academy — home">
+        <img src="assets/img/baekho-logo.svg" alt="Baekho Martial Arts Crest" class="brand__logo-img" width="38" height="38" />
+        <div class="brand__text">
+          <span class="brand__name">BAEKHO</span>
+          <span class="brand__tag">MARTIAL ARTS · SYDNEY</span>
+        </div>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Page sections">
+        <a href="#about">Master</a>
+        <a href="#benefits">Philosophy</a>
+        <a href="#programs">Programs</a>
+        <a href="#gallery">Dojang</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Location</a>
+      </nav>
+
+      <div class="site-header__cta">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">☰</button>
+        <a class="btn--header-cta" href="#contact">Free Trial Class</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= 2. HERO (BAEKHO MARTIAL ARTS SYDNEY) ================= -->
+    <section class="hero-cyber" id="top" aria-labelledby="hero-title">
+      <div class="hero-cyber__inner">
+        <div class="hero-cyber__content">
+          <!-- Social Proof / Rating Pill Badge -->
+          <div class="hero-cyber__badge">
+            <span class="hero-cyber__badge-star" aria-hidden="true">★</span>
+            <span>4.9/5 FROM 120+ SYDNEY FAMILIES <span class="hide-mobile">&middot; KUKKIWON CERTIFIED</span></span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="hero-cyber__title" id="hero-title">
+            Kick with control.<br>
+            <span class="hero-cyber__title-highlight">Grow with discipline.</span>
+          </h1>
+
+          <!-- Lead Paragraph -->
+          <p class="hero-cyber__lead">
+            Sydney's premier martial arts academy for ages 4 to adult. Small classes, Kukkiwon 5th Dan instruction, and a respectful community where every student is taught by name.
+          </p>
+
+          <!-- Dual Call-to-Actions -->
+          <div class="hero-cyber__actions">
+            <a class="btn btn--pill-primary" href="#contact">Claim 1-Week Free Trial &rarr;</a>
+            <a class="btn btn--pill-secondary" href="#programs">Explore Programs</a>
+          </div>
+
+          <!-- Intake Notice Pill -->
+          <div class="hero-cyber__intake">
+            <span class="hero-cyber__intake-dot" aria-hidden="true"></span>
+            <span>NEXT BEGINNER INTAKE &middot; TERM 1 <span class="hide-mobile">ENROLMENT &middot; ALL SKILL LEVELS WELCOME</span></span>
+          </div>
+        </div>
+
+        <!-- Hero Card (Authentic Dynamic Action Photo + Glassmorphic Overlay) -->
+        <div class="hero-cyber__card-container">
+          <div class="hero-cyber__card">
+            <img
+              src="assets/img/hero.jpg"
+              width="1200" height="896"
+              alt="Baekho Taekwondo student executing high roundhouse kick on target pad"
+              class="hero-cyber__card-img"
+              fetchpriority="high" decoding="async" />
+
+            <div class="hero-cyber__card-overlay">
+              <div class="hero-cyber__card-meta">
+                <span class="hero-cyber__card-meta-title">Master Instruction</span>
+                <span class="hero-cyber__card-meta-desc">Max 12 students per group</span>
+              </div>
+              <div class="hero-cyber__card-meta">
+                <span class="hero-cyber__card-meta-title">Sydney Dojang</span>
+                <span class="hero-cyber__card-meta-desc">Ages 4 to Adult</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Trust Ribbon Bar -->
+    <div class="trust-bar" aria-label="Academy Certifications">
+      <div class="container trust-bar__inner">
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon" aria-hidden="true">🥋</span>
+          <span>Official Kukkiwon World Taekwondo Member</span>
+        </div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon" aria-hidden="true">🏅</span>
+          <span>Olympic-Style WT Sparring &amp; Forms</span>
+        </div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon" aria-hidden="true">★</span>
+          <span>100% Certified Black Belt Instructors</span>
+        </div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon" aria-hidden="true">🛡️</span>
+          <span>Working with Children (WWCC) &amp; SafeSport Verified</span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="belt-band belt-band--animate" style="--band-color: var(--belt-white)" aria-hidden="true" />
+
+    <!-- ================= 3. ABOUT / INSTRUCTOR ================= -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container split">
+        <div class="about__photo-wrapper">
+          <figure class="about__photo-frame">
+            <img
+              src="assets/img/instructor.jpg"
+              width="900" height="1200" loading="lazy" decoding="async"
+              alt="Portrait of Master Daniel Suh, 5th Dan Kukkiwon Certified Head Master at Baekho Martial Arts Academy" />
+          </figure>
+          <div class="about__dan-seal">
+            <span>5th Dan Black Belt</span>
+            <small>Kukkiwon #052981</small>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="section-head">
+            <h2 id="about-title">Taught by name, corrected by name.</h2>
+          </div>
+          <div>
+            <h3 class="about__name">Master Daniel Suh</h3>
+            <p class="about__rank">5th Dan Black Belt · Kukkiwon Certified Master Examiner</p>
+          </div>
+          <blockquote class="about__quote">
+            "We don't teach students to fight. We teach them self-control, focus, and the quiet confidence to never have to."
+          </blockquote>
+          <p class="about__bio">Daniel has practiced martial arts for over twenty-five years and taught Olympic-style Taekwondo for eighteen, the last fourteen in Sydney. He intentionally caps each class at 12 students so every child and adult receives individual technical correction by name.</p>
+          <p class="about__bio">Belts at Baekho are earned through genuine mastery, not purchased on a timeline. Parents are always welcome to watch classes from our open viewing gallery.</p>
+          <ul class="trust" aria-label="Key academy achievements">
+            <li><strong>Founded 2011</strong><span>14 years in Sydney</span></li>
+            <li><strong>140+ Students</strong><span>Active across 5 programs</span></li>
+            <li><strong>100% Kukkiwon</strong><span>Globally recognized rank</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="belt-band" style="--band-color: var(--belt-yellow)" aria-hidden="true" />
+
+    <!-- ================= PARALLAX BREAK 1: MASTERY & STATS ================= -->
+    <section class="parallax-section parallax-dojang" aria-label="Academy Milestones & Philosophy">
+      <div class="container parallax-content">
+        <p class="chip chip--gold"><span class="chip__dot" aria-hidden="true"></span>Mastery Through Discipline</p>
+        <h2>Building Champions <span>On and Off the Mat</span></h2>
+        <p class="lead">
+          "Martial arts is not just about kicking and punching. It is an art of patience, moral discipline, and unwavering confidence. Every belt earned is a milestone in character."
+        </p>
+
+        <div class="stats-grid" aria-label="Academy Statistics">
+          <div class="stat-counter">
+            <div class="stat-counter__number" data-counter="14" data-suffix="+">14+</div>
+            <div class="stat-counter__label">Years in Sydney</div>
+            <div class="stat-counter__sub">Established in 2011</div>
+          </div>
+          <div class="stat-counter">
+            <div class="stat-counter__number" data-counter="140" data-suffix="+">140+</div>
+            <div class="stat-counter__label">Active Students</div>
+            <div class="stat-counter__sub">Ages 4 to Adult</div>
+          </div>
+          <div class="stat-counter">
+            <div class="stat-counter__number" data-counter="100" data-suffix="%">100%</div>
+            <div class="stat-counter__label">Kukkiwon Certified</div>
+            <div class="stat-counter__sub">Global Dan Registry</div>
+          </div>
+          <div class="stat-counter">
+            <div class="stat-counter__number" data-counter="5.0" data-suffix=" ★">5.0 ★</div>
+            <div class="stat-counter__label">Sydney Community Rating</div>
+            <div class="stat-counter__sub">120+ Family Reviews</div>
+          </div>
+        </div>
+
+        <div class="parallax-actions">
+          <a class="btn btn--primary" href="#contact">Claim Your 1-Week Free Trial →</a>
+          <a class="btn btn--secondary" href="#programs">Explore Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="belt-band" style="--band-color: var(--belt-green)" aria-hidden="true" />
+
+    <!-- ================= 4. WHY PARENTS CHOOSE BAEKHO ================= -->
+    <section class="section benefits" id="benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-head stack">
+          <p class="chip"><span class="chip__dot" aria-hidden="true"></span>Core Academy Philosophy</p>
+          <h2 id="benefits-title">More than martial arts. Foundational life habits.</h2>
+          <p>Parents across Sydney choose Baekho because our curriculum is built on character development, mental resilience, and positive life habits.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">🎯</div>
+            <h3>Laser Focus &amp; Listening</h3>
+            <p>Screen-free active training builds attentiveness, classroom discipline, and deep concentration that carries directly into schoolwork and homework habits.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">🛡️</div>
+            <h3>Confidence &amp; Bully Defense</h3>
+            <p>We teach assertive posture, vocal projection, emotional composure, and de-escalation tactics so children hold their ground without needing to fight.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">🥋</div>
+            <h3>Respect &amp; Martial Arts Etiquette</h3>
+            <p>Timeless values of courtesy, integrity, self-control, and perseverance are practiced in every single bow and interaction.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">⚡</div>
+            <h3>Athletic Agility &amp; Fitness</h3>
+            <p>Dynamic Olympic-style kicking routines cultivate superior core strength, balance, hip mobility, and cardiovascular health for a lifetime.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="belt-band" style="--band-color: var(--belt-blue)" aria-hidden="true" />
+
+    <!-- ================= 5. PROGRAMS & SCHEDULE ================= -->
+    <section class="section schedule" id="programs" aria-labelledby="schedule-title">
+      <div class="container stack-lg">
+        <div class="section-head stack">
+          <p class="chip"><span class="chip__dot" aria-hidden="true"></span>Class Offerings</p>
+          <h2 id="schedule-title">Programs tailored to every age</h2>
+          <p>Fixed times, small class sizes, and direct instruction from Master Daniel Suh. First trial class is free across all programs.</p>
+        </div>
+
+        <div class="programs-grid">
+          <!-- Program 1: Little Tigers -->
+          <article class="program-card-v2">
+            <span class="program-card-v2__age">Ages 4 – 6</span>
+            <h3 class="program-card-v2__title">Little Tigers</h3>
+            <p class="program-card-v2__desc">Early motor coordination, listening discipline, balance, and fun martial arts foundation games.</p>
+            <div class="program-card-v2__price">
+              <span class="program-card-v2__amount">$85 AUD</span>
+              <span class="program-card-v2__period">/ month (2x weekly)</span>
+            </div>
+            <ul class="program-card-v2__schedule">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Tuesday &amp; Thursday:</strong> 16:00 – 16:45</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Max 10 students per mat</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Free uniform with 3-month enrollment</span>
+              </li>
+            </ul>
+            <a class="btn btn--secondary" href="#contact">Book Free Tiger Class</a>
+          </article>
+
+          <!-- Program 2: Kids Taekwondo (Featured) -->
+          <article class="program-card-v2 program-card-v2--featured">
+            <span class="program-badge-popular">Most Popular</span>
+            <span class="program-card-v2__age">Ages 7 – 12</span>
+            <h3 class="program-card-v2__title">Kids Taekwondo</h3>
+            <p class="program-card-v2__desc">Complete Kukkiwon curriculum: poomsae forms, sparring defense, board breaking, and leadership progression.</p>
+            <div class="program-card-v2__price">
+              <span class="program-card-v2__amount">$99 AUD</span>
+              <span class="program-card-v2__period">/ month (3x weekly)</span>
+            </div>
+            <ul class="program-card-v2__schedule">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Mon, Wed, Fri:</strong> 17:00 – 18:00</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Kukkiwon-recognized belt testing</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>School report accountability &amp; discipline</span>
+              </li>
+            </ul>
+            <a class="btn btn--primary" href="#contact">Book Free Kids Class</a>
+          </article>
+
+          <!-- Program 3: Teens & Adults -->
+          <article class="program-card-v2">
+            <span class="program-card-v2__age">Ages 13 to Adult</span>
+            <h3 class="program-card-v2__title">Teens &amp; Adults</h3>
+            <p class="program-card-v2__desc">High-energy cardiovascular conditioning, authentic poomsae, practical self-defense, and stress relief.</p>
+            <div class="program-card-v2__price">
+              <span class="program-card-v2__amount">$115 AUD</span>
+              <span class="program-card-v2__period">/ month (unlimited)</span>
+            </div>
+            <ul class="program-card-v2__schedule">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Monday – Friday:</strong> 19:00 – 20:15</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Beginners to advanced belts welcome</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full access to weekend sparring clinics</span>
+              </li>
+            </ul>
+            <a class="btn btn--secondary" href="#contact">Book Free Adult Class</a>
+          </article>
+        </div>
+
+        <!-- Weekend Clubs Note -->
+        <div class="schedule__note">
+          <div>
+            <strong>Saturday Specialty Clubs (Add-on $30 AUD/mo or included with Adult Unlimited):</strong>
+            <p>Poomsae Form Mastery: Saturdays 09:00 – 10:00 · Olympic Sparring Tactics: Saturdays 11:00 – 12:00.</p>
+          </div>
+          <a class="btn btn--secondary btn--small" href="#contact">Inquire Saturday Clubs</a>
+        </div>
+
+        <!-- Belt Progression: The Journey to Black Belt -->
+        <div style="margin-top: 3.5rem;">
+          <div class="section-head stack">
+            <h3>The Journey to Black Belt</h3>
+            <p>In traditional martial arts, each belt represents the life cycle of growth, perseverance, and maturity:</p>
+          </div>
+
+          <ol class="belt-journey" aria-label="Belt Progression Stages">
+            <li class="belt-step">
+              <div class="belt-step__swatch" style="background: var(--belt-white); color: var(--belt-white);"></div>
+              <strong class="belt-step__name">White Belt</strong>
+              <span class="belt-step__meaning">The blank slate; innocence and willingness to learn.</span>
+            </li>
+            <li class="belt-step">
+              <div class="belt-step__swatch" style="background: var(--belt-yellow); color: var(--belt-yellow);"></div>
+              <strong class="belt-step__name">Yellow Belt</strong>
+              <span class="belt-step__meaning">The earth; the seed of technique is firmly planted.</span>
+            </li>
+            <li class="belt-step">
+              <div class="belt-step__swatch" style="background: var(--belt-green); color: var(--belt-green);"></div>
+              <strong class="belt-step__name">Green Belt</strong>
+              <span class="belt-step__meaning">The sprout breaking through the soil; rapid skill growth.</span>
+            </li>
+            <li class="belt-step">
+              <div class="belt-step__swatch" style="background: var(--belt-blue); color: var(--belt-blue);"></div>
+              <strong class="belt-step__name">Blue Belt</strong>
+              <span class="belt-step__meaning">The sky; reaching upwards as poomsae and kicks mature.</span>
+            </li>
+            <li class="belt-step">
+              <div class="belt-step__swatch" style="background: var(--belt-red); color: var(--belt-red);"></div>
+              <strong class="belt-step__name">Red Belt</strong>
+              <span class="belt-step__meaning">The fire &amp; sun; immense power tempered by self-control.</span>
+            </li>
+            <li class="belt-step">
+              <div class="belt-step__swatch" style="background: #1a2236; color: var(--cyan); border: 1px solid var(--line-cyan);"></div>
+              <strong class="belt-step__name">Black Belt (Dan)</strong>
+              <span class="belt-step__meaning">Mastery, humility, and the true beginning of wisdom.</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <hr class="belt-band" style="--band-color: var(--belt-red)" aria-hidden="true" />
+
+    <!-- ================= PARALLAX BREAK 2: OLYMPIC SPARRING ================= -->
+    <section class="parallax-section parallax-kids" aria-label="Authentic Taekwondo Experience">
+      <div class="container parallax-content">
+        <p class="chip"><span class="chip__dot" aria-hidden="true"></span>World Taekwondo Standard</p>
+        <h2>The True Spirit of <span>Olympic Taekwondo</span></h2>
+        <p class="lead">
+          From white belt balance fundamentals to high-level Olympic sparring drills, students train in an authentic, supportive environment with certified protective gear.
+        </p>
+        <div class="parallax-actions">
+          <a class="btn btn--primary" href="#contact">Experience a Real Class Free →</a>
+          <a class="btn btn--secondary" href="#gallery">View Mat Highlights</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="belt-band" style="--band-color: var(--cyan)" aria-hidden="true" />
+
+    <!-- ================= 6. GALLERY ================= -->
+    <section class="section gallery-sec" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head stack">
+          <p class="chip"><span class="chip__dot" aria-hidden="true"></span>Authentic Dojang Life</p>
+          <h2 id="gallery-title">Inside the dojang</h2>
+          <p>Real students, real sparring, and authentic martial arts culture. Select any photo to view in high definition.</p>
+        </div>
+
+        <ul class="gallery-bento" id="galleryList">
+          <li>
+            <button data-full="assets/img/gallery-1.jpg" data-cap="Little Tigers &amp; Kids Class: Learning respect, stances, and foundational kicks under the Kukkiwon banner">
+              <img src="assets/img/gallery-1.jpg" width="900" height="600" loading="lazy" decoding="async" alt="Little Tigers and kids practicing kicks on puzzle mats in the Sydney dojang" />
+              <div class="gallery-bento__overlay">
+                <strong>Little Tigers &amp; Junior Academy</strong>
+                <span>Ages 4–12 Foundation Training</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button data-full="assets/img/gallery-2.jpg" data-cap="Olympic-Style Sparring: Dynamic, controlled contact with full World Taekwondo protective gear">
+              <img src="assets/img/gallery-2.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Two Taekwondo athletes practicing controlled sparring kicks" />
+              <div class="gallery-bento__overlay">
+                <strong>Olympic Sparring</strong>
+                <span>Controlled Tactics &amp; Speed</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button data-full="assets/img/gallery-3.jpg" data-cap="Discipline &amp; Focus: Tying the black belt before poomsae forms">
+              <img src="assets/img/gallery-3.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Student tightening a black belt on a clean white dobok uniform" />
+              <div class="gallery-bento__overlay">
+                <strong>Black Belt Dedication</strong>
+                <span>Tying the Belt with Respect</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button data-full="assets/img/gallery-4.jpg" data-cap="Sparring Stance &amp; Footwork: Developing agility and lightning reaction time">
+              <img src="assets/img/gallery-4.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Martial arts athletes training barefoot in dojang sparring stances" />
+              <div class="gallery-bento__overlay">
+                <strong>Footwork &amp; Reflexes</strong>
+                <span>Barefoot Mat Drills</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button data-full="assets/img/gallery-5.jpg" data-cap="Tournament Readiness: Confidence building in competition settings">
+              <img src="assets/img/gallery-5.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Taekwondo student on competition puzzle mats" />
+              <div class="gallery-bento__overlay">
+                <strong>Competition Staging</strong>
+                <span>Confidence Under Pressure</span>
+              </div>
+            </button>
+          </li>
+          <li>
+            <button data-full="assets/img/gallery-6.jpg" data-cap="World Taekwondo Certified Gear: Headgear, chest guards (Hogu), and safety pads">
+              <img src="assets/img/gallery-6.jpg" width="600" height="400" loading="lazy" decoding="async" alt="Athlete wearing official blue protective sparring headgear" />
+              <div class="gallery-bento__overlay">
+                <strong>Safety First</strong>
+                <span>Certified WT Protective Gear</span>
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="belt-band" style="--band-color: var(--belt-yellow)" aria-hidden="true" />
+
+    <!-- ================= 7. TESTIMONIALS ================= -->
+    <section class="section testimonials" id="reviews" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head stack">
+          <p class="chip chip--gold"><span class="chip__dot" aria-hidden="true"></span>Sydney Community Reviews</p>
+          <h2 id="testimonials-title">What Sydney families say about us</h2>
+          <p>Over 140 families across Sydney train with Master Daniel Suh. Here is what they experience:</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div>
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "Our 7-year-old son Ethan used to be painfully shy and struggled to focus in school. Within 4 months with Master Suh, his teachers noticed a night-and-day change in his confidence and posture. He takes so much pride in his uniform!"
+              </blockquote>
+            </div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">SM</div>
+              <div>
+                <p class="testimonial-card__name">Sarah Mitchell</p>
+                <p class="testimonial-card__sub">Parent of Ethan (Age 7, Kids Program, Sydney)</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div>
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "The best martial arts studio in Sydney. Master Daniel knows every student by name and actually corrects technique rather than just herding kids around. Belts here are earned with real effort, not just handed out."
+              </blockquote>
+            </div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">DL</div>
+              <div>
+                <p class="testimonial-card__name">David Lin</p>
+                <p class="testimonial-card__sub">Parent of Maya (9) &amp; Kevin (11), Sydney</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div>
+              <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote class="testimonial-card__quote">
+                "I joined the adult evening program at 36 with zero martial arts experience. No judgment, incredible workout, and authentic discipline. It has completely replaced my standard gym routine."
+              </blockquote>
+            </div>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">ER</div>
+              <div>
+                <p class="testimonial-card__name">Elena Rostova</p>
+                <p class="testimonial-card__sub">Adult Evening Program Student, Sydney</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="belt-band" style="--band-color: var(--line-cyan)" aria-hidden="true" />
+
+    <!-- ================= 8. LOCATION & FREE TRIAL CONTACT ================= -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container split">
+        <div class="stack">
+          <div class="section-head stack">
+            <p class="chip"><span class="chip__dot" aria-hidden="true"></span>Visit Our Studio</p>
+            <h2 id="contact-title">Train with us in Sydney</h2>
+            <p>1420 Pacific Highway, Sydney NSW 2060, Australia. Convenient location with free reserved parking behind the building — enter through the blue door.</p>
+          </div>
+
+          <div class="map-lazy" id="mapLazy">
+            <button class="map-lazy__btn" id="mapBtn" type="button">📍 Load Google Map</button>
+          </div>
+
+          <table class="hours" aria-label="Academy Operating Hours">
+            <tbody>
+              <tr><th scope="row">Monday – Friday</th><td>15:00 – 21:00 AEST</td></tr>
+              <tr><th scope="row">Saturday</th><td>08:00 – 13:00 AEST</td></tr>
+              <tr><th scope="row">Sunday</th><td>Closed (Dojang Maintenance)</td></tr>
+            </tbody>
+          </table>
+
+          <ul class="contact-lines">
+            <li>
+              <a href="https://wa.me/61412555014?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20class" target="_blank" rel="noopener">
+                <span class="contact-lines__icon" aria-hidden="true">💬</span>
+                <span><strong>Chat on WhatsApp:</strong> +61 412 555 014</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+61295550142">
+                <span class="contact-lines__icon" aria-hidden="true">📞</span>
+                <span><strong>Call Front Desk:</strong> (02) 9555 0142</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@baekho-martialarts.com.au">
+                <span class="contact-lines__icon" aria-hidden="true">✉️</span>
+                <span><strong>Email:</strong> hello@baekho-martialarts.com.au</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="stack">
+          <form class="form" id="trialForm" novalidate
+                data-web3forms-key="PASTE_WEB3FORMS_KEY_HERE"
+                data-fallback-email="hello@baekho-martialarts.com.au">
+            <span class="form__badge">Zero Obligation Free Pass</span>
+            <h3 style="margin: 0 0 0.5rem; font-size: var(--fs-24);">Claim Your 1-Week Free Trial</h3>
+            <p style="font-size: var(--fs-14); color: var(--text-muted); margin: 0 0 1.5rem;">Experience a real class before making any commitment. Complimentary loaner uniform (Dobok) provided.</p>
+            
+            <div class="form__grid">
+              <div class="form__field">
+                <label for="f-name">Parent / Student Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="e.g. John Smith" />
+              </div>
+              <div class="form__field">
+                <label for="f-email">Email Address</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com.au" />
+              </div>
+              <div class="form__field">
+                <label for="f-phone">Phone Number <span class="form__hint">(for confirmation)</span></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+61 400 000 000" />
+              </div>
+              <div class="form__field">
+                <label for="f-program">Interested Program</label>
+                <select id="f-program" name="program">
+                  <option value="Little Tigers (4-6)">Little Tigers (Ages 4–6)</option>
+                  <option value="Kids Taekwondo (7-12)" selected>Kids Taekwondo (Ages 7–12)</option>
+                  <option value="Teens & Adults (13+)">Teens &amp; Adults (13+)</option>
+                  <option value="Saturday Clubs">Saturday Specialty Clubs</option>
+                </select>
+              </div>
+              <div class="form__field form__field--full">
+                <label for="f-msg">Goals or Questions <span class="form__hint">(optional)</span></label>
+                <textarea id="f-msg" name="message" placeholder="Tell us about the student's background, fitness goals, or any questions for Master Suh..."></textarea>
+              </div>
+              <!-- Honeypot anti-spam -->
+              <input class="hp-field" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            </div>
+            <p class="form__hint" style="margin-top: 1rem">✓ We reply within one business day · ✓ No lock-in contracts · ✓ Zero spam guaranteed</p>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            <div style="margin-top: 1.25rem">
+              <button class="btn btn--primary" type="submit" id="formSubmit" style="width: 100%">Claim Free Trial Pass →</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 9. FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__brand">Baekho Martial Arts Academy</p>
+          <p class="site-footer__hangul" style="color: var(--cyan); font-weight: 600;">Sydney, New South Wales · Australia</p>
+          <address style="margin-top: 1rem">1420 Pacific Highway, Sydney NSW 2060, Australia<br /><a href="tel:+61295550142">+61 (02) 9555 0142</a></address>
+        </div>
+        <div>
+          <h2>Programs &amp; Visit</h2>
+          <ul>
+            <li>Mon–Fri: 15:00 – 21:00 AEST</li>
+            <li>Saturday: 08:00 – 13:00 AEST</li>
+            <li><a href="#programs">Class Schedule &amp; Belts</a></li>
+            <li><a href="#about">Master Daniel Suh</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Connect</h2>
+          <ul>
+            <li><a href="https://wa.me/61412555014" target="_blank" rel="noopener">WhatsApp Chat</a></li>
+            <li><a href="tel:+61295550142">Direct Phone Line</a></li>
+            <li><a href="mailto:hello@baekho-martialarts.com.au">hello@baekho-martialarts.com.au</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__base">
+        <span>© <span id="year">2026</span> Baekho Martial Arts Academy. Sydney, Australia.</span>
+        <span>Built with hand-coded modular HTML + CSS + vanilla JS. Zero build step.</span>
+      </div>
+    </div>
+    <div style="height: 6px; background: var(--cyan); margin-top: 2rem; box-shadow: 0 0 12px var(--cyan);" aria-hidden="true"></div>
+  </footer>
+
+  <!-- Sticky CTA mobile -->
+  <div class="sticky-cta"><a class="btn btn--primary" href="#contact">Claim Free Trial Pass →</a></div>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <img id="lightboxImg" src="" alt="" />
+    <p class="lightbox__cap" id="lightboxCap"></p>
+    <button class="lightbox__close" id="lightboxClose" type="button">Close ✕</button>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

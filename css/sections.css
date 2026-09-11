@@ -1,0 +1,498 @@
+/* ==========================================================================
+   05 — SECTIONS (Dark Cyber Dojang Theme)
+   Style yang di-scope per section (#hero, #about, #benefits, #schedule,
+   #gallery, #testimonials, #contact, footer, dan parallax breaks).
+   ========================================================================== */
+
+/* -- Hero Cyber Section (Matches cybertaekwondo.com layout in Image 2) -- */
+/* ponytail: keep hero layout clean, responsive, and generously padded without heavy wrappers */
+.hero-cyber {
+  position: relative;
+  background-color: #070a11;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 78% 50%, rgba(14, 38, 70, 0.45) 0%, transparent 80%),
+    linear-gradient(135deg, rgba(7, 10, 17, 0.97) 0%, rgba(7, 10, 17, 0.88) 50%, rgba(10, 18, 32, 0.94) 100%),
+    url('../assets/img/hero-cyber-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-block: clamp(3.75rem, 6.5vw, 6rem);
+  padding-inline: clamp(1.5rem, 4.5vw, 3.5rem);
+  overflow: hidden;
+}
+.hero-cyber::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 60px;
+  background: linear-gradient(180deg, transparent 0%, var(--bg-primary) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+.hero-cyber__inner {
+  max-width: 1220px;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 4.5vw, 4.5rem);
+  align-items: center;
+}
+.hero-cyber__content {
+  position: relative;
+  z-index: 4;
+}
+.hero-cyber__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: rgba(245, 183, 0, 0.08);
+  border: 1px solid rgba(245, 183, 0, 0.35);
+  border-radius: 999px;
+  padding: 0.42rem 1.15rem;
+  font-size: var(--fs-13);
+  font-weight: 700;
+  color: #f5b700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 16px rgba(245, 183, 0, 0.12);
+}
+.hero-cyber__badge-star {
+  color: #f5b700;
+  font-size: 0.9rem;
+}
+.hero-cyber__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.04;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.85);
+}
+.hero-cyber__title-highlight {
+  color: var(--cyan);
+  text-shadow: 0 0 25px rgba(76, 201, 240, 0.55);
+}
+.hero-cyber__lead {
+  font-size: clamp(var(--fs-15), 1.25vw, var(--fs-18));
+  color: #94a3b8;
+  line-height: 1.65;
+  max-width: 52ch;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+.hero-cyber__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+.hero-cyber__intake {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(76, 201, 240, 0.06);
+  border: 1px solid rgba(76, 201, 240, 0.28);
+  border-radius: 999px;
+  padding: 0.45rem 1.15rem;
+  font-size: var(--fs-13);
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.05em;
+}
+.hero-cyber__intake-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+  flex: none;
+}
+
+/* -- Hero Card / Visual Showcase (Dynamic Action Photo + Glassmorphic Overlay) -- */
+.hero-cyber__card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.hero-cyber__card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1.5px solid rgba(76, 201, 240, 0.32);
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.85),
+    0 0 35px rgba(76, 201, 240, 0.2);
+  background: #0d121f;
+  width: 100%;
+  max-width: 520px;
+}
+.hero-cyber__card-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 600ms var(--ease-out);
+}
+.hero-cyber__card:hover .hero-cyber__card-img {
+  transform: scale(1.025);
+}
+.hero-cyber__card-overlay {
+  position: absolute;
+  inset-inline: 1rem;
+  bottom: 1rem;
+  background: rgba(7, 10, 17, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 0.85rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+}
+.hero-cyber__card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.hero-cyber__card-meta-title {
+  font-size: var(--fs-14);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+.hero-cyber__card-meta-desc {
+  font-size: var(--fs-13);
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+@media (width <= 960px) {
+  .hero-cyber {
+    padding-block: 3rem 2.5rem;
+  }
+  .hero-cyber__inner {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+  .hero-cyber__card-container {
+    max-width: 480px;
+    margin-inline: auto;
+  }
+  .hero-cyber__content {
+    text-align: left;
+  }
+  .hero-cyber__title {
+    font-size: clamp(2.2rem, 6.5vw, 3rem);
+  }
+  .hero-cyber__card-overlay {
+    inset-inline: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.65rem 0.95rem;
+  }
+}
+
+@media (width <= 560px) {
+  .hero-cyber {
+    padding-inline: 1.25rem;
+    padding-block: 2.5rem 2rem;
+  }
+  .hero-cyber__badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.85rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+  .hero-cyber__intake {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.85rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+  .hero-cyber__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-cyber__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* -- About / Master Daniel Suh Section -- */
+.about {
+  background: var(--bg-secondary);
+  position: relative;
+}
+.about .split {
+  align-items: center;
+}
+.about__photo-wrapper {
+  position: relative;
+  max-width: 480px;
+}
+.about__photo-frame {
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  box-shadow: var(--shadow-elevated);
+  border: 2px solid var(--line-cyan);
+  background: var(--bg-card);
+}
+.about__photo-frame img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+.about__dan-seal {
+  position: absolute;
+  top: 1.5rem;
+  right: -1rem;
+  background: rgba(13, 18, 31, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid var(--gold-dan);
+  color: var(--gold-dan);
+  box-shadow: 0 0 20px rgba(245, 183, 0, 0.35);
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-s);
+  font-size: var(--fs-13);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.about__dan-seal small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+.about__name {
+  font: 800 var(--fs-30) var(--font-display);
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+.about__rank {
+  font-weight: 800;
+  color: var(--cyan);
+  font-size: var(--fs-16);
+  letter-spacing: 0.02em;
+  margin-top: 0.2rem;
+}
+.about__quote {
+  font-size: var(--fs-18);
+  font-weight: 600;
+  font-style: italic;
+  color: #ffffff;
+  border-left: 4px solid var(--red-neon);
+  padding-left: 1.25rem;
+  margin-block: 1.25rem;
+  line-height: 1.55;
+  box-shadow: -10px 0 20px -8px rgba(255, 42, 85, 0.3);
+}
+.about__bio {
+  font-size: var(--fs-16);
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+.trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  list-style: none;
+  padding: 1.5rem 0 0;
+  margin: 2rem 0 0;
+  border-top: 1px solid var(--line-strong);
+}
+.trust strong {
+  display: block;
+  font: 800 var(--fs-24) var(--font-display);
+  color: var(--cyan);
+  text-shadow: 0 0 15px rgba(76, 201, 240, 0.3);
+}
+.trust span {
+  font-size: var(--fs-14);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+@media (width <= 860px) {
+  .about__dan-seal { right: 1rem; top: 1rem; }
+  .about__photo-wrapper { margin-inline: auto; }
+  .trust { grid-template-columns: 1fr; }
+}
+
+/* -- Parallax Break Section (Inspired by cybertaekwondo.com) -- */
+.parallax-dojang {
+  background-image: url('../assets/img/hero.jpg');
+}
+.parallax-kids {
+  background-image: url('../assets/img/gallery-1.jpg');
+}
+.parallax-content {
+  text-align: center;
+  max-width: 860px;
+  margin-inline: auto;
+}
+.parallax-content h2 {
+  font-size: clamp(var(--fs-30), 4.5vw, var(--fs-48));
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+.parallax-content h2 span {
+  color: var(--cyan);
+  text-shadow: 0 0 25px rgba(76, 201, 240, 0.5);
+}
+.parallax-content p.lead {
+  font-size: clamp(var(--fs-16), 2vw, var(--fs-20));
+  color: var(--text-main);
+  line-height: 1.6;
+  margin-inline: auto;
+}
+.parallax-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.25rem;
+  flex-wrap: wrap;
+}
+
+/* -- Benefits / Why Baekho Section -- */
+.benefits {
+  background: var(--bg-primary);
+}
+
+/* -- Schedule & Programs Section -- */
+.schedule {
+  background: var(--bg-secondary);
+}
+.schedule__note {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--cyan);
+  padding: 1.35rem 1.6rem;
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
+  margin-top: 2rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.schedule__note strong {
+  display: block;
+  font-size: var(--fs-16);
+  color: #ffffff;
+}
+.schedule__note p {
+  color: var(--text-muted);
+  font-size: var(--fs-14);
+  margin: 0;
+}
+
+/* -- Gallery Section -- */
+.gallery-sec {
+  background: var(--bg-primary);
+}
+
+/* -- Testimonials Section -- */
+.testimonials {
+  background: var(--bg-secondary);
+}
+
+/* -- Location & Contact Section -- */
+.contact {
+  background: var(--bg-primary);
+}
+.hours {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-15);
+  margin-top: 1.25rem;
+}
+.hours th, .hours td {
+  text-align: left;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.hours th { font-weight: 600; color: var(--text-muted); width: 45%; }
+.hours td { font-weight: 700; color: #ffffff; }
+
+/* -- Footer Section -- */
+.site-footer {
+  background: #04060b;
+  color: var(--text-muted);
+  padding-block: 4.5rem 2.5rem;
+  font-size: var(--fs-15);
+  border-top: 1px solid var(--line);
+}
+.site-footer a { color: #ffffff; text-decoration: none; transition: color var(--dur-1); }
+.site-footer a:hover { color: var(--cyan); }
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 3rem;
+}
+.site-footer__brand {
+  color: #ffffff;
+  font: 800 var(--fs-20) var(--font-display);
+  letter-spacing: -0.01em;
+}
+.site-footer__hangul {
+  font-family: var(--font-hangul);
+  color: var(--text-dim);
+  font-size: var(--fs-14);
+  margin-top: 0.25rem;
+}
+.site-footer h2 {
+  color: #ffffff;
+  font-size: var(--fs-16);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+.site-footer ul { list-style: none; padding: 0; display: grid; gap: 0.65rem; }
+.site-footer address { font-style: normal; line-height: 1.6; }
+.site-footer__base {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  margin-top: 3.5rem;
+  padding-top: 1.75rem;
+  font-size: var(--fs-14);
+  color: var(--text-dim);
+}
+@media (width <= 800px) {
+  .site-footer__grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* -- Sticky Mobile CTA -- */
+.sticky-cta { display: none; }
+@media (width <= 720px) {
+  .sticky-cta {
+    display: block;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    padding: 0.75rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom));
+    background: rgba(7, 10, 17, 0.95);
+    border-top: 1px solid var(--line-strong);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.7);
+  }
+  .sticky-cta .btn { width: 100%; min-height: 48px; }
+  body { padding-bottom: 78px; }
+}

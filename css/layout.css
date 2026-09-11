@@ -1,0 +1,80 @@
+/* ==========================================================================
+   03 — LAYOUT
+   Container, section rhythm, belt band. Struktur, bukan dekorasi.
+   ========================================================================== */
+
+.container {
+  width: min(100% - (var(--gutter) * 2), var(--container));
+  margin-inline: auto;
+}
+
+.section { padding-block: var(--section-y); }
+
+/* Dua kolom desktop → satu kolom mobile. Rata kiri, bukan center. */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+@media (width <= 860px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+/* Jarak vertikal konsisten di dalam section */
+.stack > * + * { margin-top: 1.25rem; }
+.stack-lg > * + * { margin-top: 2rem; }
+
+/* Section intro: judul + deskripsi pendek, selalu rata kiri */
+.section-head { max-width: var(--measure); }
+.section-head p { color: var(--text-muted); margin-top: 0.75rem; font-size: var(--fs-18); }
+
+/* -- Belt band: glowing neon divider -- */
+.belt-band {
+  height: var(--band-h);
+  border: 0;
+  margin: 0;
+  background: var(--band-color, var(--cyan));
+  box-shadow: 0 0 10px var(--band-color, var(--cyan));
+  position: relative;
+  z-index: 2;
+}
+
+/* Satu-satunya animasi dekoratif: band pertama menggambar kiri → kanan saat load */
+.belt-band--animate {
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: band-draw 900ms var(--ease-out) 150ms forwards;
+}
+@keyframes band-draw { to { transform: scaleX(1); } }
+
+/* -- Parallax Full-Bleed Section (Inspired by cybertaekwondo.com) -- */
+.parallax-section {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: clamp(5rem, 11vw, 8.5rem);
+  overflow: hidden;
+}
+.parallax-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(7, 10, 17, 0.72) 0%, rgba(7, 10, 17, 0.94) 100%);
+  z-index: 1;
+}
+.parallax-section > .container {
+  position: relative;
+  z-index: 2;
+}
+@media (hover: none) {
+  /* Fallback smooth scroll on mobile */
+  .parallax-section { background-attachment: scroll; }
+}
+
+@media (width <= 560px) {
+  .hide-mobile { display: none !important; }
+}

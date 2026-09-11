@@ -1,0 +1,84 @@
+/* ==========================================================================
+   02 — BASE
+   Reset minimal + tipografi + aksesibilitas. Tanpa class di sini.
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+* { margin: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-18);
+  line-height: var(--lh-body);
+  color: var(--text-main);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: var(--lh-heading);
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(var(--fs-36), 6vw, var(--fs-64));
+  line-height: var(--lh-tight);
+}
+
+h2 { font-size: clamp(var(--fs-24), 4vw, var(--fs-36)); color: var(--text-white); }
+h3 { font-size: var(--fs-24); color: var(--text-white); }
+h4 { font-size: var(--fs-20); color: var(--text-white); }
+
+p { max-width: var(--measure); color: var(--text-muted); }
+
+a { color: var(--cyan); text-decoration: none; transition: color var(--dur-1); }
+a:hover { color: #ffffff; }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection { background: var(--cyan); color: #000000; }
+
+/* Skip link untuk keyboard / screen reader */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-s);
+  text-decoration: none;
+  font-weight: 700;
+  transition: top var(--dur-1) var(--ease-out);
+}
+.skip-link:focus { top: 0.75rem; color: #fff; }
+
+/* Hormati anchor offset sticky header di semua section */
+section[id] { scroll-margin-top: calc(var(--header-h) + 16px); }

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- Geometric Shield / Crest Background -->
+  <path d="M24 4L40 10V22C40 32.5 33.2 42.1 24 45C14.8 42.1 8 32.5 8 22V10L24 4Z" 
+        fill="#0D162B" stroke="#4CC9F0" stroke-width="2" stroke-linejoin="round"/>
+  
+  <!-- Cyber Accent Lines inside Crest -->
+  <path d="M24 8L36 12.5V21C36 29 30.9 36.5 24 39C17.1 36.5 12 29 12 21V12.5L24 8Z" 
+        stroke="rgba(76, 201, 240, 0.35)" stroke-width="1.2" stroke-linejoin="round"/>
+  
+  <!-- Stylized Tiger / Martial Arts Dynamic Slash Crest -->
+  <!-- Tiger Head Angular Facets in Pure White & Electric Cyan -->
+  <path d="M24 13L28 19L33 16L30 23L34 26L28 27L24 35L20 27L14 26L18 23L15 16L20 19L24 13Z" 
+        fill="#FFFFFF"/>
+  <!-- Glowing Eye / Brow Accents -->
+  <path d="M21 21L23 23L21 24" stroke="#4CC9F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M27 21L25 23L27 24" stroke="#4CC9F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Chin / Fang Accent -->
+  <polygon points="24,29 22,33 24,35 26,33" fill="#4CC9F0"/>
+</svg>
