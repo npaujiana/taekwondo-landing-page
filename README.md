@@ -1,70 +1,55 @@
-# Baekho Taekwondo Academy — one-page site (concept project)
+# Baekho Martial Arts Academy
 
-Demo fiktif untuk bid Upwork + aset portfolio reusable.
-Live target: `https://dojang.npaujiana.tech`
+Website satu halaman untuk akademi bela diri fiktif di Sydney. Saya bikin ini sebagai demo sekaligus bahan portfolio. Studionya tidak benar-benar ada, jadi nama, alamat, dan harga yang tertulis di sini semuanya dummy.
 
-> **Concept project — fictional studio.** Nama, alamat, dan harga dummy.
+Isi halamannya, urut dari atas ke bawah:
 
-## Arsitektur
+- Hero, judul, tombol trial gratis, dan info intake berikutnya
+- Tentang pelatih, Master Daniel Suh, 5th Dan Kukkiwon
+- Benefits, alasan kenapa orang tua memilih tempat ini
+- Programs, jadwal dan harga per kelompok umur
+- Gallery, foto suasana latihan di dojang
+- Reviews, testimoni orang tua murid
+- Contact, alamat, jam buka, form, plus link WhatsApp dan telepon
+- Footer
 
-Tanpa build step, tanpa framework. Sengaja — biar gampang di-handover ke klien non-teknis.
+Dibuat dengan HTML, CSS, dan JavaScript biasa. Tanpa framework, tanpa build step, jadi tinggal upload dan jalan.
+
+## Struktur folder
 
 ```
-takewondo-landing-page/
-├── index.html            # 7 section semantik, 1x <h1>, JSON-LD SportsActivityLocation
-├── css/
-│   ├── tokens.css        # SATU-SATUNYA tempat ubah warna/font/spasi (Konsep Belt Line)
-│   ├── base.css          # reset + tipografi + focus ring + skip link
-│   ├── layout.css        # container 1120px, .split, .stack, .belt-band
-│   ├── components.css    # button, chip, nav, tabel→kartu, form, lightbox, map-lazy
-│   └── sections.css      # style per-section (#hero, #about, …), scope ketat
-├── js/
-│   └── main.js           # 5 modul IIFE: header, lightbox, map-lazy, form, misc (<3KB gz)
-├── assets/img/           # taruh foto asli klien di sini (lihat bawah)
-├── favicon.svg
-└── robots.txt
+index.html          semua section halaman ini
+css/
+  tokens.css        warna, font, ukuran. ubah desain dari sini.
+  base.css          reset dan tipografi dasar
+  layout.css        container, grid, jarak antar section
+  components.css    tombol, tabel, kartu, form, galeri
+  sections.css      style khusus tiap section
+js/
+  main.js           menu, galeri, peta, form. semuanya vanilla.
+assets/img/         semua foto halaman ini
+favicon.svg
+robots.txt
 ```
 
-**Kenapa CSS dipecah 5 file, bukan 1?**
-- `tokens.css` = kontrak desain. Klien/ganti brand cukup edit `:root`.
-- `base/layout/components/sections` = urutan cascade eksplisit di `<link>`, tidak saling menimpa.
-- Tetap 0 build step: deploy = drag folder ke Netlify / Cloudflare Pages.
+CSS-nya saya pecah jadi beberapa file biar gampang dicari. Kalau mau ganti warna atau font, cukup buka `tokens.css` bagian paling atas. Sisanya tidak perlu disentuh.
 
-**Konsep visual: Belt Line.** Tiap section dipisah band 8px yang warnanya naik
-putih → kuning → hijau → biru → merah → hitam. Halaman = perjalanan murid.
+## Kalau mau ubah isi
 
-## Cara edit (untuk klien)
+Teks, jadwal, dan harga semuanya ada di `index.html`. Cari saja id sectionnya, misalnya `id="programs"` untuk jadwal kelas.
 
-| Mau ganti… | Edit… |
-|---|---|
-| Warna / font / lebar container | `css/tokens.css` → `:root` |
-| Teks / jadwal / harga | `index.html` → cari `id="schedule"` |
-| Foto | ganti file di `assets/img/`, pertahankan nama + `width/height` di `<img>` |
-| Tujuan form | `index.html` → `data-web3forms-key` di `<form id="trialForm">` |
-| No WA / telp | cari `wa.me` dan `tel:` di `index.html` (3 titik) |
+Foto ada di `assets/img`. Kalau ganti foto, pakai nama file yang sama biar langsung kepakai tanpa edit HTML. Usahakan ukurannya mirip dengan foto lama supaya tampilannya tidak berubah.
 
-## Form
+Form butuh access key dari Web3Forms. Caranya daftar gratis, terus tempel key-nya ke atribut `data-web3forms-key` pada form di `index.html`. Kalau key belum diisi, form menampilkan pesan demo dan pengunjung tetap bisa menghubungi lewat WhatsApp yang ada di bawahnya.
 
-1. Daftar gratis di web3forms.com → dapat access key.
-2. Tempel ke `data-web3forms-key="..."` di form.
-3. Deploy. Sudah ada honeypot (`company`) + rate-limit 10 detik + pesan sukses/error.
+Nomor WhatsApp dan telepon tersebar di beberapa titik. Cari tulisan `wa.me` dan `tel:` di `index.html`, ganti semuanya dengan nomor yang benar.
 
-Tanpa key = mode demo (pesan jelas, tidak diam).
+## Menjalankan lokal
 
-## Foto
+Masuk ke folder project, lalu:
 
-Demo memakai hotlink Unsplash. Sebelum go-live klien **wajib ganti** dengan foto asli:
-- `hero` 1600px landscape (kelas, bukan pose stok)
-- `instructor` portrait 900px
-- `gallery` 6 foto 1200px (dobok V-neck putih, matras puzzle, target pad)
-- Kompres ke WebP (`hero.webp` dsb), pertahankan `width`/`height` + `alt`.
+```
+python -m http.server 8000
+```
 
-## Deploy
-
-- Netlify / Cloudflare Pages: root = folder ini, build command kosong.
-- Custom domain: `dojang.npaujiana.tech` → CNAME ke deploy URL.
-- Tes: Lighthouse mobile Perf ≥ 95, A11y 100, SEO 100. Cek 360/390/768/1024/1440, matikan wifi untuk state error form.
-
-## Clone untuk vertikal lain
-
-Ganti `tokens.css` (belt → warna brand baru), ganti copy di `index.html`, ganti 8 foto. Struktur tidak berubah. Target: karate, gym, yoga, silat.
+Buka `http://localhost:8000` di browser. Tidak perlu install apa-apa selain Python.
